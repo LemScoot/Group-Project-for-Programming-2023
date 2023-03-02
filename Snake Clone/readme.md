@@ -4,7 +4,16 @@ Snake Project for Programming Group Project 2023
 
 This is a clone of the famous snake game that was on the Nokia 3310 or Google where food shows up and you eat the food and get longer
 
+
+
+#### Picture of Gameplay
+
 ![Picture of Gameplay]()
+
+
+***
+
+#### Stages with Snake
 
 ![Picture of Stages with Snake]()
 
