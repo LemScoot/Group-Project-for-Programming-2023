@@ -18,4 +18,4 @@ This application will have Snake only game ideas but at the same time we put som
 
 #### Picture of Snake Diagram
 
-![Diagram](https://drive.google.com/file/d/1bU2V8dkj80nv5XsVwJUPeSE-0_qJJ0oR/view?usp=sharing)
+[Diagram](https://drive.google.com/file/d/1bU2V8dkj80nv5XsVwJUPeSE-0_qJJ0oR/view?usp=sharing)
