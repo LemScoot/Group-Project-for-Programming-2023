@@ -9,3 +9,5 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 ![Picture of Stages with Snake]()
 
 ![Picture of Snake](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/snake.png)
+
+![Picture of Snake Diagram]()
