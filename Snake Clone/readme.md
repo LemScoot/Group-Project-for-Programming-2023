@@ -15,8 +15,9 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 
 #### Stages with Snake
 
-![Picture of Stages with Snake]()
-
+![Picture of Stages with Snake](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/Freezelvl.png)
+![Picture of Stages with Snake](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/basiclvl.png)
+![Picture of Stages with Snake](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/cratelvl.png)
 ***
 
 #### The Snake
