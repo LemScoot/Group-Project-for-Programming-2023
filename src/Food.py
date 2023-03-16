@@ -1,3 +1,4 @@
+# Lucas Jackson | 3/16/23 | Computer Programming
 class Food:
     x=0
     y=0
