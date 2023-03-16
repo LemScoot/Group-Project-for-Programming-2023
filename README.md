@@ -2,4 +2,4 @@
 Group Project for Programming class 2023
 
 
-README for Snake Game
+README for Snake/Pacman Game
