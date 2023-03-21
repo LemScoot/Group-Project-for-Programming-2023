@@ -38,11 +38,13 @@ def startScreen():
     textAlign(CENTER)
     textSize(40)
     fill(255)
-    text("Welcome to the Snake clone", width/2, height/2)
-    text("By Python Coding Group", width/2, height/2+30)
-    text("Press Spacebar to play this game",width/2, height/2 + 60)
+    text("Welcome to the Snake Clone!", width/2, height/2-110)
+    textSize(25)
+    text("Designed Python Coding Group B2", width/2, height/2-70)
+    textSize(35)
+    text("press the spacebar to play",width/2, height/2 + 30)
     textSize(30)
-    if(keyPressed == ' '):
+    if(key == ' '):
         play = True
         
 def endScreen():
