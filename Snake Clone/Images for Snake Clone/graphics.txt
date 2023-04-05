@@ -1,2 +1,3 @@
 make start game background
 fruits food [done!]
+Make snake body to be used with code [done]
