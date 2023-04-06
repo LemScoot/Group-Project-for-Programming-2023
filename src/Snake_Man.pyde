@@ -5,7 +5,7 @@ from Food import Food
 from Snake import Snake
 
 score = 0
-value = 0  # Change to False if you want to play
+value = 0  
 
 def setup():
     size(900,1000)
