@@ -4,14 +4,14 @@ Group Project for Programming class 2023
 
 README for Snake/Pacman Game
 
-[Link to the SRC folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/src)
-
 
 # Roles of the group
 
 Product Manager - Sophia Schwankl
 
 Programmers - Liam Scott and Lucas Jackson
+
+[Link to the SRC folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/src)
 
 Multimedia Creator - Lauren Barklow
 
