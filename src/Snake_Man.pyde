@@ -1,4 +1,4 @@
-# Liam Scott | Snake-Man | Mar 2, 2023
+# Liam Scott, Lucas Jackson | Snake-Man | Mar 2, 2023
 
 # Imports
 from Food import Food
