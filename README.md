@@ -15,6 +15,8 @@ Programmers - Liam Scott and Lucas Jackson
 
 Multimedia Creator - Lauren Barklow
 
+[Link to the Snake Clone Images folder](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/Snake%20Clone/Images%20for%20Snake%20Clone)
+
 UI/UX Designer - Xuanthao Tran and Grace Min
 
 [Link to the image folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/Snake%20Clone/Images%20for%20Snake%20Clone)
