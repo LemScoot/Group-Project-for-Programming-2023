@@ -1,4 +1,4 @@
-# Liam Scott | 3/16/23 | Computer Programming
+# Liam Scott, Lucas Jackson | 3/16/23 | Computer Programming
 
 class Snake:
     
