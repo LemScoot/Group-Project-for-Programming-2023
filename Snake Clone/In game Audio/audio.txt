@@ -1,0 +1,3 @@
+background music
+snake eating
+start screen 'space bar pressed' sound
