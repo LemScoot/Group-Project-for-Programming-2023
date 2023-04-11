@@ -46,3 +46,5 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 #### Game Start Screen
 ![StartScreen](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/startscreen1Xuan.gif)
 
+#### Game Audio
+![AudioNames](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/In%20game%20Audio/audioXuanthao.txt)
