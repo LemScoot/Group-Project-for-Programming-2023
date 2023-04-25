@@ -1,4 +1,4 @@
-## Audio
+## Audio - Xuanthao
 [background music] ( put on loop)
 (https://pixabay.com/sound-effects/8-bit-heaven-26287/) 
 
@@ -15,6 +15,6 @@
 [Snake win] (cut shorter)
 (https://pixabay.com/sound-effects/success-68578/)
 
-## Font
-[Font - Xuanthao T]
+## Font - Xuanthao
+[Font]
 (https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/In%20game%20Audio/daydream_3.zip)
