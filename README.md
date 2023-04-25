@@ -19,6 +19,6 @@ Multimedia Creator - Lauren Barklow
 
 UI/UX Designer - Xuanthao Tran and Grace Min
 
-[Link to the UI/UX folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/src/data)
+[Link to the UI/UX folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/Snake%20Clone)
 
 Tester - Lilla Morrow
