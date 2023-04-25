@@ -11,6 +11,8 @@
 [snake die](https://pixabay.com/sound-effects/playerhit-43108/)
 
 
-(cut shorter)[Snake win](https://pixabay.com/sound-effects/success-68578/)
+
+[Snake win] (cut shorter)
+(https://pixabay.com/sound-effects/success-68578/)
 
 [Font - Xuanthao T](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/In%20game%20Audio/daydream_3.zip)
