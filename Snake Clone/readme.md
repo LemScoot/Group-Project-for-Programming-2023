@@ -25,7 +25,8 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 [Snake Diagram](https://drive.google.com/file/d/1VQX7soRc8v5_38ixeIj54raUgkDGsGOM/view?usp=sharing)
 
 ***
-## Snake Clone Final UI/UX
+
+# Snake Clone Final UI/UX
 #### Snake Stage (changed to only one level)
 ![Stage - Xuanthao T](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/Stage1Xuanthao.png)
 
