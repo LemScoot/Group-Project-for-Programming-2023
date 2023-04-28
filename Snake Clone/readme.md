@@ -2,7 +2,7 @@ Snake Project for Programming Group Project 2023
 
 #  Planning of Snake
 
-This is a clone of the famous snake game that was on the Nokia 3310 or Google where food shows up and you eat the food and get longer
+This is a clone of the famous snake game that was on the Nokia 3310 or Google where food shows up and you eat the food and get longer. However we are stylizing it more on pixels instead of flat colors. 
 
 [Link back to SRC folder](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/src)
 
