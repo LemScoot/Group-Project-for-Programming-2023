@@ -1,6 +1,6 @@
 # Sophie Schwankl - rendering the food, startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
 # Liam Scott - Collision detection, creation of the classes, creation of the startscreen, infopanel, and endscreen logic
-# Lucas Jackson - Creation of the Snake and Food class, did all the code in there
+# Lucas Jackson - Creation of the Snake and Food class, did all the code in there to set it up
 
 # Imports
 import random
