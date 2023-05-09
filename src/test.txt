@@ -1,1 +1,128 @@
+# Sophie Schwankl - rendering the food, startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
+# Liam Scott - Collision detection, creation of the classes, creation of the startscreen, infopanel, and endscreen logic
+# Lucas Jackson - Creation of the Snake and Food class, did all the code in there
+
+# Imports
+import random
+from Snake import *
+from Food import *
+
+# Instantiations
+s1 = Snake(200, 100)
+#f1 = Food()
+
+# Game Stuff
+play = False
+score = 0
+
+def setup():
+    global stage, start, ends
+    size(1000,1000)
+    stage = loadImage("Stage1Xuanthao.png") # This is the image for the Stage
+    start = loadImage("startscreen1Xuan.gif") # This is the image for the Startscreen
+    ends = loadImage("endScreenXuan.png") # This is the image for the Endscreen
+
+    
+def draw():
+    if not play:
+        startScreen()
+    else: 
+        background(129)
+        image(stage, 0, 0)
+        #food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+        #image(loadImage(food_img), 0, 0)
+
+        #image(loadImage("bananaXuanthaoT.png"), 0, 0)
+        s1.draw()
+        infoPanel()
+        #size(400, 400);
+        #fill(250,0,250);
+        #square(100, 100, 220);
+    
+def infoPanel():
+    fill(128, 128)
+    rectMode(CENTER)
+    rect(0, 0, 2000, 125)
+    textAlign(CENTER)
+    textSize(30)
+    fill(255)
+    text("Score: ", 75, 40)
+    text(score, 125, 41)
+    
+def startScreen(): 
+    image(start, 0, 0)
+# Text for Info in the StartScreen
+    textSize(20)
+    fill(255, 174, 0)
+    text("Welcome to Snake Clone", 665, 540)
+    text("By the Python Coding Group", 645, 570)
+    text("Press the UP arrow", 675, 625)
+    text("for the game to start", 665, 650)
+
+def keyReleased():
+    global play 
+    if key == CODED:
+        if keyCode == UP:
+            play = True
+        elif keyCode == DOWN:
+            endScreen()
+
+def endScreen():
+    image(ends, 0, 0)
+    noLoop()
+    
+def intersectWall(width, height):
+    d = dist(width, height, snake.x, snake.y)
+    if (d < 30):
+        endscreen()
+            
+def intersectFruit():
+    d = dist(f1.x, f1.y, s1.x, s1.y)
+    if(d < 30):
+        score += 5
+
+
+
+-----------------------------------
+
+
+class Snake(object):
+    # Intergers
+    global xpos
+    global ypos
+  
+    # Constructor
+    def __init__(self, xpos, ypos):
+        self.xpos = xpos
+        self.ypos = ypos
+
+    def move(self): # Move Method for Snake
+        if(keyboard.is_pressed('w')):
+            self.y = self.y - 0.1
+        if(keyboard.is_pressed('s')):
+            self.y = self.y + 0.1
+        if(keyboard.is_pressed('a')):
+            self.x = self.x - 0.1
+        if(keyboard.is_pressed('d')):
+            self.x = self.x + 0.1
+    
+        self.snake.goto(self.x,self.y)
+    
+    def draw(self): # Display Method for Snake
+        fill(255, 174, 0)
+        #snake.spines['top'].set_visible(False)
+        #snake.spines['right'].set_visible(False)
+        #snake.spines['bottom'].set_visible(False)
+       # snake.spines['left'].set_visible(False)
+        rect(92,92, 65, 65, 25)  # each square is 65/65 - first colum of squares is at 92
+    
+  #  def grow(self):
+  #      self.grow.
+
+    def intersect(Food, food):
+        d = dist(x, y, food.x, food.y)
+        if (d<50):
+            return True
+        else: 
+            return False
 
