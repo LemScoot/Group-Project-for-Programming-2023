@@ -38,7 +38,7 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 ![Peach - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/PeachGM-1.png.png)
 
 #### Snake Body (Split into 3 parts for easier coding)
-![Head - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/SnakeInCodeHeadGminYellow.png-1.png.png)
+![Head - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/SnakeInCodeHeadGminYellow.png-1.png-2.png)
 ![Head win - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/SnakeHeadYellowGminWin.png)
 ![Head lose - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/SnakeHeadYellowGminLose.png)
 ![Body - Grace M](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/SnakeInCodeMiddleGminYellow-1.png.png)
