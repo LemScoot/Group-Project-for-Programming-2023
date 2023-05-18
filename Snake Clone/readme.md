@@ -51,4 +51,4 @@ This is a clone of the famous snake game that was on the Nokia 3310 or Google wh
 ![LoseScreen - Xuanthao T](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/LostScreenXuan.png)
 
 #### End Screen - Win
-![WinScreen - Xuanthao T] (https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/WinScreenXuan.png)
+![WinScreen - Xuanthao T](https://github.com/LemScoot/Group-Project-for-Programming-2023/blob/main/Snake%20Clone/Images%20for%20Snake%20Clone/WinScreenXuan.png)
