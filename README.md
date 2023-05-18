@@ -7,7 +7,7 @@ README for Snake/Pacman Game
 
 # Roles of the group
 
-Product Manager - Sophia Schwankl
+Product Manager/programmer - Sophie Schwankl
 
 Programmers - Liam Scott and Lucas Jackson
 
