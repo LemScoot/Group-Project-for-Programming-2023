@@ -2,12 +2,12 @@
 Group Project for Programming class 2023
 
 
-README for Snake/Pacman Game
+README for Snake Game
 
 
 # Roles of the group
 
-Product Manager/programmer - Sophie Schwankl
+Product Manager/Programmer - Sophie Schwankl
 
 Programmers - Liam Scott and Lucas Jackson
 
