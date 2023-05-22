@@ -1,0 +1,206 @@
+# Sophie Schwankl - rendering the food, startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
+# Liam Scott - Collision detection, creation of the classes, creation of the startscreen, infopanel, and endscreen logic
+# Lucas Jackson - Creation of the Snake and Food class, did all the code in there
+
+# Imports
+import random
+from Snake import *
+from Food import *
+
+GAME_WIDTH = 1000
+GAME_HEIGHT = 1000
+SPEED = 50
+SPACE_SIZE = 65
+BODY_PARTS = 3
+ 
+# Instantiations
+s1 = Snake(65)
+f1 = Food()
+
+# Game Stuff
+play = False
+score = 0
+
+def setup():
+    global stage, start, ends
+    size(1000,1000)
+    frameRate(2)
+    stage = loadImage("Stage1Xuanthao.png") # This is the image for the Stage
+    #start = loadImage("startscreen1Xuan.gif") # This is the image for the Startscreen
+    ends = loadImage("endScreenXuan.png") # This is the image for the Endscreen
+    
+def draw():
+    #if not play:
+    #    startScreen()
+   # else: 
+    background(129)
+    image(stage, 0, 0)
+    food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+    # image(loadImage(food_img), 0, 0)
+    
+    image(loadImage("bananaXuanthaoT.png"), 400, 400, 65, 65)
+    s1.draw()
+    infoPanel()
+        # size(400, 400)
+        # fill(250,0,250)
+        # square(100, 100, 220)
+        
+    # Move method for the Snake
+ 
+    
+def infoPanel():
+    fill(128, 128)
+    rectMode(CENTER)
+    rect(0, 0, 2000, 125)
+    textAlign(CENTER)
+    textSize(30)
+    fill(255)
+    text("Score: ", 75, 40)
+    text(score, 125, 41)
+    
+def startScreen(): 
+    image(start, 0, 0)
+# Text for Info in the StartScreen
+    textSize(20)
+    fill(255, 174, 0)
+    text("Welcome to Snake Clone", 665, 540)
+    text("By the Python Coding Group", 645, 570)
+    text("Press the UP arrow", 675, 625)
+    text("for the game to start", 665, 650)
+
+def keyReleased():
+    global key 
+    print(key)
+    if key == 'w' or key == 'W':
+        s1.action(key)
+    elif key == 'A' or key == 'a':
+        s1.action(key)
+    elif key == 'S' or key == 's':
+        s1.action(key)
+    elif key == 'D' or key == 'd':
+        s1.action(key)
+    if key == CODED:
+        if keyCode == UP:
+            play = True
+    
+    s1.update()
+    s1.draw()
+        # elif keyCode == DOWN:
+        #     endScreen()
+
+def endScreen():
+    image(ends, 0, 0)
+    noLoop()
+    
+def intersectWall(width, height):
+    d = dist(width, height, snake.x, snake.y)
+    if (d < 30):
+        endscreen()
+            
+def intersectFruit():
+    d = dist(f1.x, f1.y, s1.x, s1.y)
+    if(d < 30):
+        score += 5
+        
+        
+        
+        
+        
+        
+        -------------------------------------
+        class Food(object):
+    
+# Intergers
+    x = 0
+    y = 0
+    diam = 0
+
+# Constructor        
+    def __init__(self):
+        self.x = 100
+        self.y = -100
+        self.diam = 1,1
+        self.rand = int(random(3))
+            
+        #food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+        #image(loadImage(food_img), 0, 0)
+    def display(self): # Display Method for Food
+        # Img = ["appleXuanthaoT.png", "bananaXuanthaoT.png"]
+        # random.choice(Img)
+        Img = "appleXuanthaoT.png"
+        
+    def move(self): # Move Method for Food
+        self.x
+        self.y
+        for i in range(x, y):
+            r = random(x, y)
+            r.display()
+            
+    def intersect(Snake, snake):
+        s = dist(x, y, snake.x, snake.y)
+        if (s < 50):
+            return True
+        else: 
+            return False
+            
+            
+            
+            
+            
+            -------------------------------------
+            class Snake(object):
+    
+    # Intergers
+    global xpos
+    global ypos
+  
+    # Constructor
+    def __init__(self, size):
+        self.x = 3 * size
+        self.y = 3 * size
+        self.vx = 1
+        self.vy = 0
+        self.size = size
+    
+        self.body = [
+        (self.x - size, self.y),
+        (self.x - size * 2, self.y)
+        ]
+        
+    def update(self):
+        self.body.pop(0)
+        self.body.append((self.x, self.y))
+        self.x += self.vx * self.size
+        self.y += self.vy * self.size        
+
+    def action(self, dir): # Move Method for Snake
+        print("move: "+dir)
+        if key == "w" and self.vy != 1:
+            self.vx = 0
+            self.vy = -1
+        if key == "a" and self.vx != 1:
+            self.vx = -1
+            self.vy = 0
+        if key == "s" and self.vy != -1:
+            self.vx = 0
+            self.vy = 1
+        if key == "d" and self.vx != -1:
+            self.vx = 1
+            self.vy = 0
+            
+    
+    def draw(self): # Display Method for Snake
+        fill(255)
+        rect(self.x, self.y, self.size, self.size)
+        for part in self.body:
+            rect(part[0], part[1], self.size, self.size) # each square is 65/65 - first colum of squares is at 92
+    
+    # def grow(self):
+    #    self.grow
+
+    def intersect(Food, food):
+        d = dist(x, y, food.x, food.y)
+        if (d<50):
+            return True
+        else: 
+            return False
