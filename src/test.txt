@@ -1,44 +1,51 @@
-# Sophie Schwankl - rendering the food, startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
+# Sophie Schwankl - rendering the food, snake, getting snake to move, endgame/collision detection , startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
 # Liam Scott - Collision detection, creation of the classes, creation of the startscreen, infopanel, and endscreen logic
-# Lucas Jackson - Creation of the Snake and Food class, did all the code in there to set it up
+# Lucas Jackson - Creation of the Snake and Food class, did all the code in there
 
 # Imports
 import random
 from Snake import *
 from Food import *
 
+GAME_WIDTH = 1000
+GAME_HEIGHT = 1000
+GRID_SIZE = 50 
+ 
 # Instantiations
-s1 = Snake(200, 100)
-#f1 = Food()
+s1 = Snake(65) 
+f1 = Food()
 
 # Game Stuff
 play = False
 score = 0
 
 def setup():
-    global stage, start, ends
+    #global stage, ends#, start
+    print("end of draw")
     size(1000,1000)
-    stage = loadImage("Stage1Xuanthao.png") # This is the image for the Stage
-    start = loadImage("startscreen1Xuan.gif") # This is the image for the Startscreen
+    frameRate(4)
+    stage = loadImage("StageXuan.png") # This is the image for the Stage
+    #start = loadImage("startscreen1Xuan.gif") # This is the image for the Startscreen
     ends = loadImage("endScreenXuan.png") # This is the image for the Endscreen
-
     
 def draw():
-    if not play:
-        startScreen()
-    else: 
-        background(129)
-        image(stage, 0, 0)
-        #food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
-        #image(loadImage(food_img), 0, 0)
-
-        #image(loadImage("bananaXuanthaoT.png"), 0, 0)
-        s1.draw()
-        infoPanel()
-        #size(400, 400);
-        #fill(250,0,250);
-        #square(100, 100, 220);
-    
+    #if not play:
+    #    startScreen()
+   # else: 
+    background(129)
+    image(stage, 0, 0)
+    food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+    # image(loadImage(food_img), 0, 0)
+    image(loadImage("bananaXuanthaoT.png"), GRID_SIZE, GRID_SIZE, 100, 100)
+    #f1.draw()
+    s1.update()
+    s1.draw()
+    if s1.x > GAME_WIDTH or s1.y > GAME_HEIGHT:
+        endScreen()
+    if s1.x < 0 or s1.y < 0:
+        endScreen()
+    infoPanel()
+   
 def infoPanel():
     fill(128, 128)
     rectMode(CENTER)
@@ -60,12 +67,24 @@ def startScreen():
     text("for the game to start", 665, 650)
 
 def keyReleased():
-    global play 
+    global key 
+    print(key)
+    if key == 'w' or key == 'W':
+        s1.action(key)
+    elif key == 'A' or key == 'a':
+        s1.action(key)
+    elif key == 'S' or key == 's':
+        s1.action(key)
+    elif key == 'D' or key == 'd':
+        s1.action(key)
     if key == CODED:
         if keyCode == UP:
             play = True
-        elif keyCode == DOWN:
-            endScreen()
+    
+    s1.update()
+    s1.draw()
+        # elif keyCode == DOWN:
+        #     endScreen()
 
 def endScreen():
     image(ends, 0, 0)
@@ -80,49 +99,101 @@ def intersectFruit():
     d = dist(f1.x, f1.y, s1.x, s1.y)
     if(d < 30):
         score += 5
+        
+        
+        -------------------------------------------
+        class Food(object):
+    
+# Intergers
+    x = 0
+    y = 0
+    diam = 0
 
-
-
------------------------------------
-
-
+# Constructor        
+    def __init__(self):
+        self.x = 100
+        self.y = 100
+       # self.diam = 1,1
+       # self.rand = random(3)
+            
+        #food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+        #image(loadImage(food_img), 0, 0)
+        
+    def draw(self): # Display Method for Food
+        #img = random.choice(["appleXuanthaoT.png", "bananaXuanthaoT.png"])
+        img = "appleXuanthaoT.png"
+        #image(loadImage(img), GRID_SIZE, GRID_SIZE, 100, 100)
+        
+    def move(self): # Move Method for Food
+        self.x
+        self.y
+        for i in range(x, y):
+            r = random(x, y)
+            r.display()
+            
+    def intersect(Snake, snake):
+        s = dist(x, y, snake.x, snake.y)
+        if (s < GRID_SIZE):
+            return True
+        else: 
+            return False
+            
+            
+            
+            --------------------------------------------
+            #used some code by MagicHatJo from their github repository 
 class Snake(object):
+    
     # Intergers
     global xpos
     global ypos
   
     # Constructor
-    def __init__(self, xpos, ypos):
-        self.xpos = xpos
-        self.ypos = ypos
+    def __init__(self, size):
+        self.x = 3 * size
+        self.y = 3 * size
+        self.vx = 1
+        self.vy = 0
+        self.size = size
+    
+        self.body = [
+        (self.x - size, self.y),
+        (self.x - size * 2, self.y)
+        ]
+        
+    def action(self, dir): # Move Method for Snake
+        if key == "w" and self.vy != 1:
+            self.vx = 0
+            self.vy = -1
+        if key == "a" and self.vx != 1:
+            self.vx = -1
+            self.vy = 0
+        if key == "s" and self.vy != -1:
+            self.vx = 0
+            self.vy = 1
+        if key == "d" and self.vx != -1:
+            self.vx = 1
+            self.vy = 0
+            
+    def update(self):
+        self.body.pop(0)
+        self.body.append((self.x, self.y))
+            
+        self.x += self.vx * self.size
+        self.y += self.vy * self.size   
+             
+    def grow(self):
+        self.body.insert(0, self.body[0])
 
-    def move(self): # Move Method for Snake
-        if(keyboard.is_pressed('w')):
-            self.y = self.y - 0.1
-        if(keyboard.is_pressed('s')):
-            self.y = self.y + 0.1
-        if(keyboard.is_pressed('a')):
-            self.x = self.x - 0.1
-        if(keyboard.is_pressed('d')):
-            self.x = self.x + 0.1
-    
-        self.snake.goto(self.x,self.y)
-    
     def draw(self): # Display Method for Snake
-        fill(255, 174, 0)
-        #snake.spines['top'].set_visible(False)
-        #snake.spines['right'].set_visible(False)
-        #snake.spines['bottom'].set_visible(False)
-       # snake.spines['left'].set_visible(False)
-        rect(92,92, 65, 65, 25)  # each square is 65/65 - first colum of squares is at 92
-    
-  #  def grow(self):
-  #      self.grow.
+        fill(253, 208, 63)
+        rect(self.x, self.y, self.size, self.size, 10)
+        for part in self.body:
+            rect(part[0], part[1], self.size, self.size, 10) 
 
     def intersect(Food, food):
         d = dist(x, y, food.x, food.y)
-        if (d<50):
+        if (d<GRID_SIZE):
             return True
         else: 
             return False
-
