@@ -13,7 +13,7 @@ Programmers - Liam Scott and Lucas Jackson
 
 [Link to the SRC folder for Snake Game](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/src)
 
-Multimedia Creator - Lauren Barklow
+Multimedia Creator - Lauren (Ren) Barklow
 
 [Link to the Snake Clone Images folder](https://github.com/LemScoot/Group-Project-for-Programming-2023/tree/main/Snake%20Clone/Images%20for%20Snake%20Clone)
 
