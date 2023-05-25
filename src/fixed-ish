@@ -1,0 +1,110 @@
+# Sophie Schwankl - rendering the food, snake, getting snake to move, endgame/collision detection , startscreen, trying to get the gif and fonts to work, aesthetic changes & more.  
+# Liam Scott - Collision detection, creation of the classes, creation of the startscreen, infopanel, and endscreen logic
+# Lucas Jackson - Creation of the Snake and Food class, did all the code in there
+# Grace Min - trouble shoot intersect and food relocation
+# Imports
+import random
+from Snake import *
+from Food import *
+
+GAME_WIDTH = 1000
+GAME_HEIGHT = 1000
+GRID_SIZE = 100 
+ 
+# Instantiations
+s1 = Snake(65) 
+f1 = Food(GAME_WIDTH, GAME_HEIGHT, GRID_SIZE)
+
+# Game Stuff
+play = False
+score = 0
+
+def setup():
+    print("setup called")
+    global stage, ends, starts
+    size(GAME_WIDTH, GAME_HEIGHT)
+    frameRate(4)
+    stage = loadImage("StageXuan.png") # This is the image for the Stage
+    # start = loadImage("startscreen1Xuan.gif") # This is the image for the Startscreen
+    ends = loadImage("endScreenXuan.png") # This is the image for the Endscreen
+    
+def draw():
+   # if not play:
+   #  startScreen()
+   # else: 
+    background(129)
+    image(stage, 0, 0)
+    food_img = random.choice(['appleXuanthaoT.png', 'bananaXuanthaoT.png'])
+    # image(loadImage(food_img), 0, 0)
+    image(loadImage("bananaXuanthaoT.png"), GRID_SIZE, GRID_SIZE, 100, 100)
+    #f1.draw()
+    s1.update()
+    s1.draw()
+    if s1.x > GAME_WIDTH or s1.y > GAME_HEIGHT:
+        endScreen()
+    if s1.x < 0 or s1.y < 0:
+        endScreen()
+    
+    intersectFood()
+    infoPanel()
+   
+def infoPanel():
+    fill(128, 128)
+    rectMode(CENTER)
+    rect(0, 0, 2000, 125)
+    textAlign(CENTER)
+    textSize(30)
+    fill(255)
+    text("Score: ", 75, 40)
+    text(score, 125, 41)
+    
+def startScreen(): 
+    image(start, 0, 0)
+# Text for Info in the StartScreen
+    textSize(20)
+    fill(255, 174, 0)
+    text("Welcome to Snake Clone", 665, 540)
+    text("By the Python Coding Group", 645, 570)
+    text("Press the UP arrow", 675, 625)
+    text("for the game to start", 665, 650)
+
+def keyReleased():
+    global key
+    if key == 'w' or key == 'W':
+        s1.action(key)
+    elif key == 'A' or key == 'a':
+        s1.action(key)
+    elif key == 'S' or key == 's':
+        s1.action(key)
+    elif key == 'D' or key == 'd':
+        s1.action(key)
+    if key == CODED:
+        if keyCode == UP:
+            play = True
+    
+    s1.update()
+    s1.draw()
+
+    
+
+def endScreen():
+    image(ends, 0, 0)
+    noLoop()
+    
+def intersectWall(width, height):
+    d = dist(width, height, snake.x, snake.y)
+    if (d < 65):
+        endscreen()
+            
+def intersectFood():
+
+    d = dist(f1.x, f1.y, s1.x, s1.y)
+    if(d < 150 and d > -150):
+        print("hi")
+        f1.move()
+        s1.grow()
+        print("after grow")
+        score=1 #once it is turned into score+=1 it breaks
+        print("after score")
+   # the food is somewhere on the board, the snake gets longer if you magically hit it. It just needs to be redrawn. 
+    
