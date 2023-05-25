@@ -127,6 +127,12 @@ class Food:
         self.y = random(0, self.height - self.size) or self.size * self.size
         #print("move")
     def display(self): # Display Method for Food
+     # if col:
+        #     self.x = int(random(self.width - self.size))
+        #     print("move")
+        #     self.y = random(self.height - self.size)
+        #     col = False
+        # else:
         image(loadImage("bananaXuanthaoT.png"), GRID_SIZE, GRID_SIZE, GRID_SIZE, GRID_SIZE)
 
         -------------------------------------------
